@@ -1,0 +1,15 @@
+<section>
+  <form [formGroup]="loginForm" fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="10px" (ngSubmit)="onSubmit()">
+
+    <mat-form-field>
+      <input matInput formControlName="emailAddress" placeholder="Email address">
+    </mat-form-field>
+
+    <mat-form-field>
+        <input matInput formControlName="password" placeholder="Password">
+    </mat-form-field>
+
+    <button mat-raised-button>Log in</button>
+
+  </form>
+</section>
