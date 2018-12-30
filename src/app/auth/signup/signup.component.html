@@ -3,8 +3,8 @@
 
     <mat-form-field>
       <input matInput ngModel email required type="email" placeholder="Your email" name="email" #emailInput="ngModel">
-      <mat-error *ngIf="emailInput.hasError('required')">Field must not be empty</mat-error>
-      <mat-error *ngIf="!emailInput.hasError('required')">E-mail is invalid</mat-error>
+      <mat-error *ngIf="!!emailInput.errors?.required">Field must not be empty</mat-error>
+      <mat-error *ngIf="!!emailInput.errors?.email">E-mail is invalid</mat-error>
     </mat-form-field>
 
     <mat-form-field>
